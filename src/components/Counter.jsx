@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { decrement } from "../redux/counterReducer/counterActions";
 
 function Counter() {
   const [value, setValue] = useState(0);
@@ -13,9 +14,7 @@ function Counter() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={() => dispatch({ type: "DECREMENT", payload: value })}>
-        decrese
-      </button>
+      <button onClick={() => dispatch(decrement(value))}>decrese</button>
     </div>
   );
 }
