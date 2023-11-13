@@ -1,11 +1,11 @@
-import { DECREMENT } from "./counterType";
+import { DECREMENT_TWO } from "./counterTwoType";
 
 const initialState = {
-  number: 10,
+  number: 20,
 };
-export default function counterReducer(state = initialState, action) {
+export default function counterTwoReducer(state = initialState, action) {
   switch (action.type) {
-    case DECREMENT: {
+    case DECREMENT_TWO: {
       return {
         ...state,
         number: state.number - action.payload,

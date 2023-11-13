@@ -1,11 +1,13 @@
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
-import Counter from "./components/Counter.jsx";
+import CounterOne from "./components/CounterOne.jsx";
+import CounterTwo from "./components/CounterTwo.jsx";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <Counter />
+      <CounterOne />
+      <CounterTwo />
     </Provider>
   );
 }
