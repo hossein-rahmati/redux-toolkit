@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { decrementOne } from "../redux/counterOneReducer/counterOneActions";
+import { decrementOne } from "../redux/counterOne/counterOneActions";
 
 function CounterOne() {
   const [value, setValue] = useState(0);
