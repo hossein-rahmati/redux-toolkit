@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { decrementTwo } from "../redux/counterTwo/counterTwoActions";
+import { decrement } from "../features/counter/counterSlice";
 
-function CounterTwo() {
+function Counter() {
   const [value, setValue] = useState(0);
-  const state = useSelector((state) => state.counterTwo);
+  const state = useSelector((state) => state.counter);
   const dispatch = useDispatch();
   return (
     <div>
@@ -14,9 +14,9 @@ function CounterTwo() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={() => dispatch(decrementTwo(value))}>decrese</button>
+      <button onClick={() => dispatch(decrement(value))}>decrese</button>
     </div>
   );
 }
 
-export default CounterTwo;
+export default Counter;

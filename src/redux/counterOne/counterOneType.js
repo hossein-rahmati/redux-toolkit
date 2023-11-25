@@ -1,1 +1,0 @@
-export const DECREMENT_ONE = "DECREMENT_ONE";
