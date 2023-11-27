@@ -11,15 +11,19 @@ Redux Toolkit is a powerful toolset that simplifies and streamlines the developm
 To run the sample code locally, follow these steps:
 
 1.  Clone the repository:
+    
     `git clone https://github.com/your-username/redux-toolkit-sample.git`
 
-2.  Change into the project directory:
+3.  Change into the project directory:
+
     `cd redux-toolkit-sample`
 
-3.  Install dependencies:
+5.  Install dependencies:
+
     `npm install`
 
-4.  Start the development server:
+7.  Start the development server:
+
     `npm start`
 
 This will launch the application in your default web browser at `http://localhost:3000`.
