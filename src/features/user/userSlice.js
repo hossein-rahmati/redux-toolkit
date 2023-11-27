@@ -4,9 +4,12 @@ import axios from "axios";
 export const getAsyncUsers = createAsyncThunk(
   "user/getAsyncUsers",
   async (payload, { rejectWithValue }) => {
+    // console.log(payload);
     try {
-      const { data } = axios.get("https://jsonplaceholder.typicode.com/users");
-      return data;
+      const response = await axios.get(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      return response.data;
     } catch (error) {
       rejectWithValue(error.message);
     }
@@ -30,6 +33,7 @@ const userSlice = createSlice({
       state.error = "";
     },
     [getAsyncUsers.fulfilled]: (state, action) => {
+      state.loading = false;
       state.data = action.payload;
       state.error = "";
     },

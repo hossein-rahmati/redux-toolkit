@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import { fetchUsers } from "../redux/user/userActions";
 import { useDispatch, useSelector } from "react-redux";
+import { getAsyncUsers } from "../features/user/userSlice";
 
 function UsersList() {
   const dispatch = useDispatch();
-  const { loading, data, error } = useSelector((state) => state.users);
+  const { loading, data, error } = useSelector((state) => state.user);
 
   useEffect(() => {
-    dispatch(fetchUsers());
+    dispatch(getAsyncUsers());
+    // dispatch(getAsyncUsers({ id: 1, name: "test" }));
   }, [dispatch]);
 
   return (
